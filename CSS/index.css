@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+.desc{
+    margin: 20px;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.desc p{
+    padding: 0 10%;
+    font-size: 22px;
+}
