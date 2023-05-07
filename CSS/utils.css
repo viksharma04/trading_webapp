@@ -8,6 +8,10 @@ h1,h2{
     justify-self: center;
 }
 
+html{
+    height: 100%;
+}
+
 body{
     height: 100%;
     margin: 0;
@@ -16,6 +20,10 @@ body{
     font-family:'Courier New', Courier, monospace;
 }
 
+a{
+    display: inline-block;
+    line-height: 1;
+}
 /* Containers */
 .container{
     margin: 0 auto;
@@ -43,13 +51,11 @@ body{
 .flex-h{
     display: flex;
     flex-direction: row;
-    height: 100%;
 }
 
 .flex-v{
     display: flex;
     flex-direction: row;
-    height: 100%;
 }
 
 /* Backgrounds */
@@ -71,6 +77,7 @@ body{
 .navbar{
     padding: 5px;
     margin: 1%;
+    max-height: 5%;
     justify-content: space-between;
     align-items: center;
 }
