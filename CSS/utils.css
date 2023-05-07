@@ -1,0 +1,106 @@
+:root{
+    --light-color: wheat;
+    --dark-color: #000;
+  }
+
+/* Element Properties */
+h1,h2{
+    justify-self: center;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 1%;
+    background-color: var(--dark-color);
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* Containers */
+.container{
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0;
+}
+
+.card{
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    transition: 0.5s;
+    justify-content: center;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Container arrangement */
+.flex-h{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.flex-v{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/* Backgrounds */
+.bg-dark{
+    background-color: var(--dark-color);
+    color: var(--light-color)
+}
+
+.bg-dark a{
+    color: var(--light-color)
+}
+
+.bg-light{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Header */
+.navbar{
+    padding: 5px;
+    margin: 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    padding-left: 2%;
+}
+
+.nav-links a{
+    padding: 0 15px;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid var(--light-color);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:last-child{
+    margin-right: 0px;
+}
+
+.nav-links a:hover{
+    color: black;
+    background-color:var(--light-color);
+}
+
+/* Footer */
+footer{
+    color: var(--light-color);
+    padding: 0px 10px;
+}
