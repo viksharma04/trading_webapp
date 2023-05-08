@@ -27,12 +27,17 @@
   </nav>
 
   <main>
-    <!-- Add container for filters -->
-    <!-- Container for Cards - scroll overflow -->
-    <div class="card">
-      <h2>Trade Idea - 07 May 23</h2>
-      <a href="trades/trade_07_05_23.html">Trade Idea - 07 May 23</a>
-    </div>
+    <section class="trade-selector flex-v">
+      <select id="trade-dropdown">
+        <option value="" data-src="#">Select a document</option>
+        <option value="https://drive.google.com/file/d/18pHlj1EkIPxK0MneZHd7k2zXtQHqZcRA/preview">Document 1</option>
+        <option value="document2.pdf">Document 2</option>
+        <option value="document3.pdf">Document 3</option>
+      </select>
+  
+      <iframe id="trade-iframe" src="" width="1000" height="800" allow="autoplay"></iframe>
+
+    </section>
 
   </main>
 
@@ -43,29 +48,20 @@
 
   <!-- Add your JavaScript code or scripts here -->
   <script>
-    window.addEventListener('load', function () {
-        const file = 'sample.csv'; // Replace 'filename.csv' with the actual file name
-      
-        fetch(file)
-          .then(response => response.text())
-          .then(contents => {
-            const lines = contents.split('\n');
-      
-            for (let i = 1; i < lines.length; i++) {
-              const values = lines[i].split(',');
-              const number = parseFloat(values[0]);
-      
-              const numberElement = document.createElement('p');
-              numberElement.textContent = number;
-      
-              const numbersContainer = document.getElementById('numbers-container');
-              numbersContainer.appendChild(numberElement);
-            }
-          })
-          .catch(error => {
-            console.error('Error reading the file:', error);
-          });
-      });
+    // Get the dropdown element
+    const documentDropdown = document.getElementById('trade-dropdown');
+
+    // Get the iframe element
+    const documentIframe = document.getElementById('trade-iframe');
+
+    // Add change event listener to the dropdown
+    documentDropdown.addEventListener('change', function() {
+      // Get the selected value
+      const selectedValue = documentDropdown.value;
+
+      // Update the src attribute of the iframe
+      documentIframe.src = selectedValue;
+    });
   </script>
 
 </body>

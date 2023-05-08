@@ -55,7 +55,7 @@ a{
 
 .flex-v{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /* Backgrounds */
