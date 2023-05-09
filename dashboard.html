@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Water My Options</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="CSS/utils.css">
+  <link rel="stylesheet" href="CSS/dashboard.css">
+
+</head>
+<body>
+
+  <nav class="navbar bg-dark flex-h">
+    <!-- Add your navigation menu here -->
+        <h1 class="logo">Water (What are) My Options?</h1>
+        <nav class="nav-links flex-h">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="journal.html">Trades</a>
+            <a href="dashboard.html">Dasboard</a>
+        </nav>
+  </nav>
+
+  <nav class="dashboard-navbar bg-dark flex-h">
+
+  </nav>
+
+  <main>
+    <section class="dashboard_content">
+        <iframe src="http://maximum-pain.com/options" width="1200", height="400", frameborder="0"></iframe>
+        <iframe src="" width="1200", height="400", frameborder="0"></iframe>
+    </section>
+    
+
+  </main>
+
+  <footer>
+    <!-- Add your footer content, important links, and copyright details here -->
+    <p>&copy; 2023 Water (What are) My Options?</p>
+  </footer>
+
+  <!-- Add your JavaScript code or scripts here -->
+  <script>
+    // Get the dropdown element
+    const documentDropdown = document.getElementById('trade-dropdown');
+
+    // Get the iframe element
+    const documentIframe = document.getElementById('trade-iframe');
+
+    // Add change event listener to the dropdown
+    documentDropdown.addEventListener('change', function() {
+      // Get the selected value
+      const selectedValue = documentDropdown.value;
+
+      // Update the src attribute of the iframe
+      documentIframe.src = selectedValue;
+    });
+  </script>
+
+</body>
+</html>
