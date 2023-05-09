@@ -15,7 +15,6 @@ html{
 body{
     height: 100%;
     margin: 0;
-    padding: 1%;
     background-color: var(--dark-color);
     font-family:'Courier New', Courier, monospace;
 }
@@ -55,7 +54,7 @@ a{
 
 .flex-v{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /* Backgrounds */
