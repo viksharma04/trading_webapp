@@ -34,3 +34,10 @@ option{
     align-items: center;
     justify-content: center;
 }
+
+/* make journal.html elements responsive */
+@media screen and (max-width: 768px){
+    .trade-iframe{
+        width: 100%;
+    }
+}
