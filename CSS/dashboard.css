@@ -1,0 +1,51 @@
+iframe{
+    margin: 2%;
+}
+
+.dashboard_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    padding: 5%;
+}
+
+.tab_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabcontent {
+    display: flex;
+    flex-direction: column;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+}
+  
+.tablinks {
+    background-color: black;
+    border-left: 1px solid wheat;
+    border: 1%;
+    color: wheat;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.1s;
+}
+  
+.tablinks:hover {
+    background-color: wheat;
+    color: black;
+}
+  
+.tablinks.active {
+    background-color: black;
+    color: wheat;
+    border: 1px solid wheat;
+}
+  
