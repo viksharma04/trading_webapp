@@ -30,3 +30,25 @@
     padding: 20px 20px;
     color: #f5deb3;
 }
+
+/* Make index.html elements responsive */
+@media screen and (max-width: 768px){
+    .top-row{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .desc{
+        margin: 20px;
+        align-items: center;
+        color: whitesmoke;
+    }
+    .desc p{
+        padding: 0 5%;
+        font-size: 22px;
+    }
+    .plot{
+        padding: 20px 20px;
+        color: #f5deb3;
+    }
+}
