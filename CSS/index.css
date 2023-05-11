@@ -27,9 +27,11 @@
 }
 
 .plot{
-    padding: 20px 20px;
     color: #f5deb3;
+    width: 479px;
+    height: 371px;
 }
+
 
 /* Make index.html elements responsive */
 @media screen and (max-width: 768px){
@@ -47,8 +49,8 @@
         padding: 0 5%;
         font-size: 22px;
     }
+    /* make plot size responsive */
     .plot{
-        padding: 20px 20px;
         color: #f5deb3;
     }
 }

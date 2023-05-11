@@ -26,6 +26,8 @@ option{
 .trade-iframe{
     border: 3px solid wheat;
     border-radius: 2%;
+    width:800; 
+    height:1000;
 }
 
 .tradeselector{
@@ -38,6 +40,7 @@ option{
 /* make journal.html elements responsive */
 @media screen and (max-width: 768px){
     .trade-iframe{
-        width: 100%;
+        width: 500px;
+        height: 625px;
     }
 }
