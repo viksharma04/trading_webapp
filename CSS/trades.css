@@ -37,6 +37,28 @@ option{
     justify-content: center;
 }
 
+.all_trades_link{
+    padding: 0 15px;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid var(--light-color);
+    background-color: wheat;
+    transition: 0.3s;
+}
+
+.all_trades_link:hover{
+    color: wheat;
+    background-color: black;
+}
+
+/* all_trades.html */
+.trades-iframe{
+    width: 1000px;
+    height: 50vh;
+}
+
 /* make journal.html elements responsive */
 @media screen and (max-width: 768px){
     .trade-iframe{
