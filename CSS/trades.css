@@ -59,9 +59,17 @@ option{
     height: 50vh;
 }
 
-/* make journal.html elements responsive */
+/* make trades.html elements responsive */
 @media screen and (max-width: 768px){
     .trade-iframe{
+        width: 300px;
+        height: 375px;
+    }
+}
+
+/* Make all_trades.html responsive */
+@media screen and (max-width: 768px){
+    .trades-iframe{
         width: 300px;
         height: 375px;
     }
