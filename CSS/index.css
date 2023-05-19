@@ -35,6 +35,12 @@
 
 /* Make index.html elements responsive */
 @media screen and (max-width: 768px){
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .top-row{
         flex-direction: column;
         align-items: center;
