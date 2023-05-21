@@ -34,7 +34,7 @@
 
     <div class="tabs">
         <section class="tab_buttons">
-            <button class="tablinks" onclick="openTab(event, 'Tab1')">Market Temperature</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab1')">Market Returns</button>
             <button class="tablinks" onclick="openTab(event, 'Tab2')">Sector Performance</button>
             <button class="tablinks" onclick="openTab(event, 'Tab3')">Charts</button>
             <button class="tablinks" onclick="openTab(event, 'Tab4')">Other Data Sources</button>
@@ -43,7 +43,7 @@
         
         <div id="Tab1" class="tabcontent">
             <section class="dashboard_content">
-                <h3>Market Temperature</h3>
+                <h3>Market Returns</h3>
                 <!-- Add 5 images from stock return charts folder in images folder -->
                 <div class="viewport">
                     <img src="" alt="" id="current-image">
@@ -105,6 +105,22 @@
         // Add 'active' class to the clicked tab link
         event.currentTarget.className += ' active';
         }
+
+        function showTab() {
+
+            var tabName = 'Tab1';
+
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName('tabcontent');
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = 'none';
+            }
+
+            document.getElementById(tabName).style.display = 'block';
+
+        }
+
+        showTab();
 
         
         var images = [
