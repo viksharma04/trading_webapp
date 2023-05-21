@@ -42,9 +42,15 @@
 
         
         <div id="Tab1" class="tabcontent">
-            <h3>Market Temperature</h3>
             <section class="dashboard_content">
-                <img src="./images/daniel-olah-MvoWhoTzEqo-unsplash.jpg" alt="Stock Market Performance">
+                <h3>Market Temperature</h3>
+                <!-- Add 5 images from stock return charts folder in images folder -->
+                <div class="viewport">
+                    <img src="" alt="" id="current-image">
+                </div>
+                <br>
+                <button onclick="previousImage()">Previous</button>
+                <button onclick="nextImage()">Next</button>
             </section>
         </div>
         
@@ -97,6 +103,45 @@
         // Add 'active' class to the clicked tab link
         event.currentTarget.className += ' active';
         }
+
+        
+        var images = [
+            "images/stock return charts/market_returns_1 week.jpg",
+            "images/stock return charts/market_returns_1 month.jpg",
+            "images/stock return charts/market_returns_3 months.jpg",
+            // Add more image URLs as needed
+        ];
+
+        var currentIndex = 0;
+
+        // Function to display the current image
+        function displayImage() {
+            var currentImage = document.getElementById("current-image");
+            currentImage.src = images[currentIndex];
+        }
+
+        // Function to navigate to the previous image
+        function previousImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1;
+            }
+            displayImage();
+        }
+
+        // Function to navigate to the next image
+        function nextImage() {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            displayImage();
+        }
+
+        // Display the initial image
+        displayImage();
   </script>
 
 </body>

@@ -18,18 +18,18 @@ for period in periods.keys():
     table = returns_df.round(2).sort_values(by=f'{period}', ascending=False)
     
     fig, ax = plt.subplots(figsize=(10, 6))
-    bar_container = ax.barh(table.index, table[period].astype(float), color='#f5deb3')
+    bar_container = ax.barh(table.index, table[period].astype(float), color='black')
     ax.set(ylabel='percent return', title=f'Stock Market Returns - {period}', xlim=(table[period].min()-1, table[period].max() + 1))
     ax.bar_label(
-        bar_container, fmt='%.2f', label_type='edge', color='#f5deb3'
+        bar_container, fmt='%.2f', label_type='edge', color='black'
     )
-    ax.set_facecolor('black')
-    fig.set_facecolor('black')
+    ax.set_facecolor('#f5deb3')
+    fig.set_facecolor('#f5deb3')
     # Make axis and data labels white
-    ax.tick_params(axis='x', colors='#f5deb3')
-    ax.tick_params(axis='y', colors='#f5deb3')
-    ax.title.set_color('#f5deb3')
-    ax.yaxis.label.set_color('#f5deb3')
+    ax.tick_params(axis='x', colors='black')
+    ax.tick_params(axis='y', colors='black')
+    ax.title.set_color('black')
+    ax.yaxis.label.set_color('black')
 
     # plt.savefig('../images/bp.jpg', facecolor=fig.get_facecolor())
     # Save plot in images folder

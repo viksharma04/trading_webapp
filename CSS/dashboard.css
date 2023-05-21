@@ -7,8 +7,6 @@ iframe{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5%;
-    padding: 5%;
 }
 
 .tab_buttons{
@@ -48,4 +46,18 @@ iframe{
     color: wheat;
     border: 1px solid wheat;
 }
-  
+
+/* CSS for the viewport */
+.viewport {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+/* CSS for the image */
+.viewport img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
