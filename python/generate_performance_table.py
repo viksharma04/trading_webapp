@@ -1,5 +1,6 @@
 import yfinance as yf
 import pandas as pd
+from datetime import date
 import matplotlib.pyplot as plt
 
 tickers = ['DIA', 'IWM', 'QQQ', 'SPY', 'VTI']
@@ -15,11 +16,11 @@ for period, days in periods.items():
 
 for period in periods.keys():
 
-    table = returns_df.round(2).sort_values(by=f'{period}', ascending=False)
+    table = returns_df.round(2).sort_index(ascending=False)
     
     fig, ax = plt.subplots(figsize=(10, 6))
     bar_container = ax.barh(table.index, table[period].astype(float), color='black')
-    ax.set(ylabel='percent return', title=f'Stock Market Returns - {period}', xlim=(table[period].min()-1, table[period].max() + 1))
+    ax.set(ylabel='percent return', title=f'Last {period} Created on: {date.today()}', xlim=(table[period].min()-1, table[period].max() + 1))
     ax.bar_label(
         bar_container, fmt='%.2f', label_type='edge', color='black'
     )
