@@ -34,7 +34,7 @@
 
     <div class="tabs">
         <section class="tab_buttons">
-            <button class="tablinks" onclick="openTab(event, 'Tab1')">Max Pain</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab1')">Market Returns</button>
             <button class="tablinks" onclick="openTab(event, 'Tab2')">Sector Performance</button>
             <button class="tablinks" onclick="openTab(event, 'Tab3')">Charts</button>
             <button class="tablinks" onclick="openTab(event, 'Tab4')">Other Data Sources</button>
@@ -42,9 +42,17 @@
 
         
         <div id="Tab1" class="tabcontent">
-            <h3>Options Max Pain</h3>
             <section class="dashboard_content">
-                <iframe src="http://maximum-pain.com/options" width="1200", height="400", frameborder="0"></iframe>
+                <h3>Market Returns</h3>
+                <!-- Add 5 images from stock return charts folder in images folder -->
+                <div class="viewport">
+                    <img src="" alt="" id="current-image">
+                </div>
+                <br>
+                <div class="bttn-container">
+                    <button onclick="previousImage()">Previous</button>
+                    <button onclick="nextImage()">Next</button>
+                </div>
             </section>
         </div>
         
@@ -97,6 +105,63 @@
         // Add 'active' class to the clicked tab link
         event.currentTarget.className += ' active';
         }
+
+        function showTab() {
+
+            var tabName = 'Tab1';
+
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName('tabcontent');
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = 'none';
+            }
+
+            document.getElementById(tabName).style.display = 'block';
+
+        }
+
+        showTab();
+
+        
+        var images = [
+            "images/stock return charts/market_returns_1 week.jpg",
+            "images/stock return charts/market_returns_1 Month.jpg",
+            "images/stock return charts/market_returns_3 Months.jpg",
+            "images/stock return charts/market_returns_6 Months.jpg",
+            "images/stock return charts/market_returns_1 Year.jpg"
+            // Add more image URLs as needed
+        ];
+
+        var currentIndex = 0;
+
+        // Function to display the current image
+        function displayImage() {
+            var currentImage = document.getElementById("current-image");
+            currentImage.src = images[currentIndex];
+        }
+
+        // Function to navigate to the previous image
+        function previousImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1;
+            }
+            displayImage();
+        }
+
+        // Function to navigate to the next image
+        function nextImage() {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            displayImage();
+        }
+
+        // Display the initial image
+        displayImage();
   </script>
 
 </body>
