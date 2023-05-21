@@ -20,8 +20,8 @@ body{
     background-image: url("../images/daniel-olah-MvoWhoTzEqo-unsplash.jpg");
     background-size: cover;
     font-family:'Courier New', Courier, monospace;
-    background-repeat: repeat;
     background-position: 50%;
+    background-attachment: fixed;
 }
 
 a{
