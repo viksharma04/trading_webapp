@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 tickers = ['DIA', 'IWM', 'QQQ', 'SPY', 'VTI']
 data = yf.download(tickers, period='1y')['Adj Close']
 
-periods = {'1 week':5, '1 Month':30, '3 Months':90, '6 Months':180, '1 Year':250}
+periods = {'1 Day':2, '1 week':5, '1 Month':30, '3 Months':90, '6 Months':180, '1 Year':250}
 # create a data frame with tickers as the index and periods.keys() as the columns
 returns_df = pd.DataFrame(index=tickers, columns=periods.keys())
 
