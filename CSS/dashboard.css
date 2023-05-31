@@ -127,4 +127,8 @@ iframe{
     .tab_buttons{
         flex-direction: column;
     }
+
+    .sheet_content{
+        flex-direction: column;
+    }
 }
