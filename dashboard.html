@@ -36,7 +36,7 @@
         <section class="tab_buttons">
             <button class="tablinks" onclick="openTab(event, 'Tab1')">Market Returns</button>
             <button class="tablinks" onclick="openTab(event, 'Tab2')">Sector Performance</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab3')">Charts</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')">Predictions & FLAGS</button>
             <button class="tablinks" onclick="openTab(event, 'Tab4')">Other Data Sources</button>
         </section>
 
@@ -62,8 +62,15 @@
         </div>
         
         <div id="Tab3" class="tabcontent">
-            <h3>Content for Tab 3</h3>
-            <p>This is the content of Tab 3.</p>
+            <section class="dashboard_content">
+                <h3>See current predictions and flagged tickers below</h3>
+                <section class="sheet_content">
+                    <iframe class="sheet-container1" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT6XFtmaK-4Y4qAvtROw0b2PpvIXEEVucxuCsde7NVy1zCuQmwYNUh25AuoaY8dQt5-RS1AcsYSQLhS/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                    <iframe class="sheet-container2" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT6XFtmaK-4Y4qAvtROw0b2PpvIXEEVucxuCsde7NVy1zCuQmwYNUh25AuoaY8dQt5-RS1AcsYSQLhS/pubhtml?gid=623064504&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                </section>
+            </section>
+                
+            
         </div>
 
         <div id="Tab4" class="tabcontent">
