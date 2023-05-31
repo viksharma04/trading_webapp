@@ -89,6 +89,24 @@ iframe{
     border: 1px solid wheat;
 }
 
+/* Format Tab 3 Content */
+.sheet_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-container1{
+    width: 35vw;
+    height: 50vh;
+}
+
+.sheet-container2{
+    width: 25vw;
+    height: 50vh;
+}
+
 /* Make dashboard.html responsive */
 @media only screen and (max-width: 600px) {
     .viewport {
