@@ -131,4 +131,14 @@ iframe{
     .sheet_content{
         flex-direction: column;
     }
+
+    .sheet-container1{
+        width: 250px;
+        height: 50vh;
+    }
+    
+    .sheet-container2{
+        width: 150px;
+        height: 50vh;
+    }
 }
