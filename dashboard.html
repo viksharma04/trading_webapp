@@ -57,8 +57,18 @@
         </div>
         
         <div id="Tab2" class="tabcontent">
-            <h3>Content for Tab 2</h3>
-            <p>This is the content of Tab 2.</p>
+            <section class="dashboard_content">
+                <h3>Sector Returns</h3>
+                <!-- Add 5 images from stock return charts folder in images folder -->
+                <div class="viewport">
+                    <img src="" alt="" id="current-image2">
+                </div>
+                <br>
+                <div class="bttn-container">
+                    <button onclick="previousImage()">Previous</button>
+                    <button onclick="nextImage()">Next</button>
+                </div>
+            </section>
         </div>
         
         <div id="Tab3" class="tabcontent">
@@ -140,12 +150,27 @@
             // Add more image URLs as needed
         ];
 
+        var images2 = [
+            "images/sector return charts/sector_returns_1 Day.jpg",
+            "images/sector return charts/sector_returns_1 week.jpg",
+            "images/sector return charts/sector_returns_1 Month.jpg",
+            "images/sector return charts/sector_returns_3 Months.jpg",
+            "images/sector return charts/sector_returns_6 Months.jpg",
+            "images/sector return charts/sector_returns_1 Year.jpg"
+        ];
+
+
         var currentIndex = 0;
 
         // Function to display the current image
         function displayImage() {
             var currentImage = document.getElementById("current-image");
             currentImage.src = images[currentIndex];
+        }
+
+        function displayImage2() {
+            var currentImage2 = document.getElementById("current-image2");
+            currentImage2.src = images2[currentIndex];
         }
 
         // Function to navigate to the previous image
@@ -156,6 +181,7 @@
                 currentIndex = images.length - 1;
             }
             displayImage();
+            displayImage2();
         }
 
         // Function to navigate to the next image
@@ -166,10 +192,12 @@
                 currentIndex = 0;
             }
             displayImage();
+            displayImage2();
         }
 
         // Display the initial image
         displayImage();
+        displayImage2();
   </script>
 
 </body>
