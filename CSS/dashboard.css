@@ -107,6 +107,19 @@ iframe{
     height: 50vh;
 }
 
+/* Format tab 4 content */
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img{
+    width: 50vw;
+    height: auto;
+}
+
 /* Make dashboard.html responsive */
 @media only screen and (max-width: 600px) {
     .viewport {
