@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
 
 :root{
-    --light-color: #f5deb3;
+    --light-color: wheat;
     --dark-color: #000;
   }
 
@@ -25,9 +25,9 @@ body{
 }
 
 a{
-    display: inline-block;
-    line-height: 1;
+    text-align: center;
 }
+
 /* Containers */
 .container{
     margin: 0 auto;
@@ -91,16 +91,18 @@ a{
 }
 
 .nav-links a{
-    background-color: wheat;
-    padding: 0 15px;
-    margin-right: 10px;
+    background-color: var(--light-color);
+    padding: 10px 15px;
+    margin-right: 12px;
     white-space: nowrap;
     font-size: 18px;
     text-decoration: none;
     border: 1px solid black;
     font-size: larger;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: 0.1s;
+    font-weight: bold;
+    width: 100px;
 }
 
 .nav-links a:last-child{
@@ -108,8 +110,8 @@ a{
 }
 
 .nav-links a:hover{
-    color: wheat;
-    background-color:black;
+    color: var(--light-color);
+    background-color:var(--dark-color);
 }
 
 /* Footer */
